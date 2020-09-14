@@ -198,7 +198,9 @@ p {
 
 .main__recruit__members h4 {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%); /*要素の大きさの半分ずつを戻す*/
+  -webkit-transform: translateY(-50%);
 }
 
 .main__recruit__detail .col-md-4 {
@@ -303,6 +305,16 @@ footer {
     margin-left: 0;
   }
 
+  .header__logo img {
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .header__logo p , .footer__title h4 {
+    font-size: 1.2rem;
+  }
+
   .header__menu {
     display: none;
   }
@@ -377,6 +389,11 @@ footer {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+  }
+
+  .footer__title img {
+    width: 50px;
+    height: 50px;
   }
 }
 
