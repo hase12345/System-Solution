@@ -249,12 +249,16 @@ footer {
   display: flex;
   align-items: center;
   -webkit-align-items: center;
-  cursor: pointer;
 }
 
 .footer__title img {
   width: 60px;
   height: 60px;
+  cursor: pointer;
+}
+
+.footer__title h4 {
+  cursor: pointer;
 }
 
 .footer__copyright {
@@ -323,6 +327,12 @@ footer {
     display: flex;
   }
 
+  .carousel-item  {
+    overflow: hidden;
+    width: 750px;
+    height: 100vh;
+  }
+
   .main__title {
     left: 0;
     width: 100%;
@@ -366,6 +376,14 @@ footer {
 
   .main__message__text p {
     color: #fff;
+  }
+
+  .main__service img {
+    height: 170px;
+  }
+
+  .main__service h4 {
+    font-size: 1.4rem;
   }
 
   .main__recruit {
