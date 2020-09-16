@@ -15,7 +15,7 @@ $(() => {
 
   $('.drawer').drawer();
 
-  $('.header__logo, .footer__title').click(() =>{
+  $('.header__logo, .footer__title img , .footer__title h4').click(() =>{
     $('html').animate({
       scrollTop:0
     },800);
