@@ -22,35 +22,21 @@ $(() => {
     return false;
   })
 
-  // var forms = document.querySelectorAll('.needs-validation')
-  // // Loop over them and prevent submission
-  // Array.prototype.slice.call(forms)
-  //   .forEach(function (form) {
-  //     form.addEventListener('submit', function (event) {
-  //       if (!form.checkValidity()) {
-  //         event.preventDefault()
-  //         event.stopPropagation()
-  //       }
-
-  //       form.classList.add('was-validated')
-  //     }, false)
-  //   })
-
-    window.addEventListener('load', () => {
-      // カスタムブートストラップ検証スタイルを適用するすべてのフォームを取得
-      let forms = document.getElementsByClassName('needs-validation');
-      // ループして帰順を防ぐ
-      let validation = Array.prototype.filter.call(forms, (form) => {
-        // submitボタンを押したら以下を実行
-        form.addEventListener('change', (event) => {
-          if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
+  window.addEventListener('load', () => {
+    // カスタムブートストラップ検証スタイルを適用するすべてのフォームを取得
+    let forms = document.getElementsByClassName('needs-validation');
+    // ループして帰順を防ぐ
+    let validation = Array.prototype.filter.call(forms, (form) => {
+      // submitボタンを押したら以下を実行
+      form.addEventListener('change', (event) => {
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
 
   //モーダルウィンドウ
   $('.js-modal-open').on('click' , () => {
@@ -58,8 +44,7 @@ $(() => {
     let formControlName =[];
     $('.form-control').each((i,elem) => {
       formControlName.push($(elem).val());
-      console.log(formControlName);
-        $($('.table td')[i]).text(formControlName[i]);
+      $($('.table td')[i]).text(formControlName[i]);
     })
     return false;
   });
