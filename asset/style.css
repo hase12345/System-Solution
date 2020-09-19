@@ -165,9 +165,9 @@ p {
 .main__message__text {
   opacity: 0.9;
   width: 60%;
-  padding: 6% ;
+  padding: 5% ;
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 0;
   z-index: 10;
   background-color: #fff;
@@ -283,7 +283,7 @@ footer {
   top: 40%;
 }
 
-.main__service h4, .main__recruit h3 {
+.main__service h4, .main__recruit h3, .main__contact h3 {
   font-family: a-otf-midashi-go-mb31-pr6n,sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -298,6 +298,32 @@ footer {
   display: block;
   max-width: 100%;
   width: 100%;
+}
+
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
 }
 
 @media screen and (max-width:750px) {
@@ -327,10 +353,8 @@ footer {
     display: flex;
   }
 
-  .carousel-item  {
-    overflow: hidden;
-    width: 750px;
-    height: 100vh;
+  .carousel-item img {
+    min-width: 750px;
   }
 
   .main__title {
@@ -372,6 +396,7 @@ footer {
   .main__message__text {
     background-color: transparent;
     color: #fff;
+    top: 25%;
   }
 
   .main__message__text p {
@@ -418,9 +443,5 @@ footer {
 @media screen and (max-width: 350px) {
   body {
     min-width: 350px;
-  }
-
-  footer p {
-    text-align: center;
   }
 }
