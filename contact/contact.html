@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Solution -contact-</title>
+  <link rel="shortcut icon" href="../asset/img/favicon.ico"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <link rel="stylesheet" href="../asset/style.css">
+<body class="drawer drawer--right">
+  <header class="fixed-top text-white p-md-3" role="banner">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-4 col-8">
+          <div class="header__logo align-items-center">
+            <h1><a href="../index.html"><img src="../asset/img/advancer_logo.png" alt="advancer"></a></h1>
+            <p class="text-white font-weight-bold">Advancer</p>
+          </div>
+        </div>
+        <div class="col-md-8 col-4">
+          <nav class="nav justify-content-end  header__menu">
+            <a class="nav-link active text-white" href="../index.html">HOME</a>
+            <a class="nav-link text-white" href="../aboutUs/aboutUs.html">ABOUT US</a>
+            <a class="nav-link text-white" href="../Recruit/recruit.html">RECRUIT</a>
+            <a class="nav-link text-white" href="#">CONTACT</a>
+          </nav>
+          <div class="justify-content-end header__bar">
+            <button type="button" class="drawer-toggle drawer-hamburger">
+              <span class="sr-only">toggle navigation</span>
+              <span class="drawer-hamburger-icon"></span>
+            </button>
+            <nav class="drawer-nav" role="navigation">
+              <ul class="drawer-menu mt-5 text-center">
+                <li><a class="drawer-menu-item" href="../index.html">HOME</a></li>
+                <li><a class="drawer-menu-item" href="../aboutUs/aboutUs.html">ABOUT US</a></li>
+                <li><a class="drawer-menu-item" href="../Recruit/recruit.html">RECRUIT</a></li>
+                <li><a class="drawer-menu-item" href="contact.html">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="main__video__title">
+      <video id="main-video" src="../asset/video/contact.mp4" autoplay loop muted playsinline></video>
+      <div class="main__video__title__text text-white text-center ">
+        <h2 class="font-weight-bold">CONTACT</h2>
+        <p class="text-white">お問い合わせはこちらから</p>
+      </div>
+    </div>
+  </section>
+  <section class="main__contact">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h3 class="text-center my-5">お問い合わせフォーム</h3>
+          <p>弊社に関するご質問、案件に関するご相談などはこちらで受付ております。</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <form class="needs-validation" action="https://api.staticforms.xyz/submit" method="post" novalidate>
+            <!-- Replace with accesKey sent to your email -->
+            <input type="hidden" name="accessKey" value="2fe9bb09-a4c5-4f7b-97c6-5b3fdddd48df"> <!-- Required -->
+            <div class="form-group">
+              <label>お名前<span class="ml-2 badge badge-danger">必須</span></label>
+              <input type="text" name="name" class="form-control" placeholder="山田　太郎" value="" id="name" required>
+              <div class="invalid-feedback">
+                お名前を入力してください
+              </div>
+            </div>
+            <div class="form-group">
+              <label>お名前(カナ)<span class="ml-2 badge badge-danger">必須</span></label>
+              <input type="text" name="name" class="form-control " placeholder="ヤマダ　タロウ" value="" required>
+              <div class="invalid-feedback">
+                お名前（カナ）を入力してください
+              </div>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス<span class="ml-2 badge badge-danger">必須</span></label>
+              <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="info@esample.co.jp" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+              <div class="invalid-feedback">
+                正しいメールアドレスを入力してください
+              </div>
+            </div>
+            <div class="form-group">
+              <label>電話番号<span class="ml-2 badge badge-danger">必須</span></label>
+              <input type="tel" name="phone" class="form-control" id="phone" inputmode="tel" placeholder="012-3456-7890" value="" pattern="\d{2,4}-?\d{3,4}-?\d{3,4}" required>
+              <div class="invalid-feedback">
+                正しい電話番号を入力してください
+              </div>
+            </div>
+            <div class="form-group">
+              <label>会社名<span class="ml-2 badge badge-secondary">任意</span></label>
+              <input type="text" name="message" class="form-control" id="company" aria-describedby="emailHelp" placeholder="アドバンサー株式会社" value="">
+            </div>
+            <div class="form-group">
+              <label>所在地<span class="ml-2  badge badge-secondary">任意</span></label>
+              <input type="text" name="message" class="form-control" id="address" aria-describedby="emailHelp" placeholder="東京都渋谷区 渋谷1-12-2 クロスオフィス渋谷" value="">
+            </div>
+            <div class="form-group">
+              <label>お問い合わせ内容<span class="ml-2 badge badge-danger">必須</span></label>
+              <textarea class="form-control" name="message" id="contact" cols="20" rows="5" placeholder="お問い合わせ内容をお書きください" value="" required></textarea>
+              <div class="invalid-feedback">
+                お問い合わせ内容を入力してください
+              </div>
+            </div>
+            <!-- If you want replyTo to be set to specific email -->
+            <input type="hidden" name="replyTo" value="y-hasegawa@advancer.co.jp"> <!-- Optional -->
+            <!-- Specify @ as reply to value if you want it to be customers email -->
+            <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+            <!-- If you want form to redirect to a specific url after submission -->
+            <input type="hidden" name="redirectTo" value="https://hase12345.github.io/System-Solution/""> <!-- Optional -->
+            <button type="submit" class="btn btn-primary w-100 js-modal-open" value="Submit">確認</button>
+            <div class="modal js-modal">
+              <div class="modal__bg js-modal-close"></div>
+              <div class="modal__content">
+                <p>下記内容で送信します。よろしいでしょうか。</p>
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th scope="row">お名前</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">お名前（カナ）</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">メールアドレス</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">メールアドレス（確認）</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">電話番号</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">会社名</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">所在地</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">お問い合わせ内容</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="submit" class="btn btn-primary" value="Submit">送信</button>
+                <button class="btn btn-primary js-modal-close" href="">閉じる</button>
+              </div><!--modal__inner-->
+            </div><!--modal-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="footer__title">
+            <img class="img-fluid" src="../asset/img/advancer_logo.png" alt="">
+            <h4 class="font-weight-bold text-white"> Advancer</h4>
+          </div>
+          <p class="text-white pl-4">100JOBS 100PLACES</p>
+          <p class="pl-4">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="https://github.com/hase12345/System-Solution/" data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhase12345.github.io%2FSystem-Solution%2F&layout=button_count&size=small&width=80&height=20&appId" width="80" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-white text-right footer__copyright">&copy; 2020 Hasegawa Yukihiro</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="../asset/script.js"></script>
+  </body>
+  </html>
